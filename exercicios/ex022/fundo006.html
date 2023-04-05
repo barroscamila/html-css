@@ -7,18 +7,29 @@
     <title>Mudando o tamanho da Imagem</title>
     <style>
         body {
-            height: 100vh;
-            background-color: black; 
-            /* É ideal sempre colocar uma cor de fundo, mesmo quando será utilizada uma iamgem de fundo, tendo em vista que durante o carregamento da página é possível demorar a carregar */
+            height: 100vh; 
+            
+            /*
+            background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;        
+            background-attachment: fixed; 
+            */
+
+            /* 
+                Shorthand - background
+                    color > image > position > repeat > [size] > attachment
+                obs: na prática, o size não funciona na shorthand ainda em alguns navegadores
+            */
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover; 
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -43,7 +54,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quis ea corporis illum accusamus repellendus veritatis officia, vitae molestias aliquid temporibus aspernatur. A debitis, voluptatibus in unde officiis eos distinctio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos sit necessitatibus aliquid itaque. Tenetur, delectus hic veniam facere voluptate, deserunt, repudiandae ducimus mollitia at sint minus officiis obcaecati blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, sed? Placeat ab accusamus quae dicta optio asperiores illo neque, mollitia velit quas eaque ex amet aut? Doloremque totam consectetur ratione.
         </p>
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quidem, inventore voluptate asperiores beatae id explicabo maiores eligendi minus corporis quas ea, laudantium facere sequi iste? Nihil, officia quas. Ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, saepe. Quos quidem debitis dolorem consequatur laudantium molestias quas tenetur recusandae animi quae? Mollitia, dolore impedit? Cum quasi nihil laboriosam alias?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quidem, inventore voluptate asperiores beatae id explicabo maiores eligendi minus corporis quas ea, laudantium facere sequi iste? Nihil, officia quas. Ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, saepe. Quos quidem debitis dolorem consequatur laudantium molestias quas tenetur recusandae animi quae? Mollitia, dolore impedit? Cum quasi nihil laboriosam alias? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quidem molestias dolor sed ab repellendus? Libero consequatur ut ad consectetur nemo. Quis voluptate velit repellat error dolores maiores minima nobis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus officiis omnis praesentium nulla cum culpa laborum odio pariatur ex. Aliquid animi necessitatibus non quod, quibusdam vero odit temporibus eum fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero molestias sequi, nobis recusandae facere soluta modi laboriosam debitis aperiam consectetur repudiandae vel reiciendis culpa quaerat consequuntur voluptates? Tempore, voluptatibus optio.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est reprehenderit magni, dolor, quo ipsum repellendus ullam libero, sunt exercitationem mollitia laboriosam quibusdam facere aliquam ad laborum impedit? Sunt, officiis natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus consequuntur cumque obcaecati optio consequatur aliquam nam nisi dolorum consectetur quia quae laborum, atque, quos, asperiores porro quaerat est pariatur tempora. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi alias enim aut in modi? Facere, dolorem reprehenderit, consectetur enim ad obcaecati fuga asperiores aliquid reiciendis minus praesentium veniam, repellat temporibus!
         </p>
     </main>
 </body>
