@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="one">
+        <p>
+            <label for="iest">Estado:</label>
+            <select name="est" id="iest">
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+                <!-- Para que o valor do value não apareça na lista, pode apagá-lo -->
+            </datalist>
+        </p>
+
+         <!--
+            Diferença entre SELECT e DATALIST:
+                - O select não dá opção para o usuário inserir uma outra opção diferente das listadas. Então é indicado para usar com listas específica, como por exemplo os estados do Brasil.
+                - O datalist, diferente do select, dá a opção para o usuário selecionar uma das opções da lista, ou então entrar com uma nova resposta.
+
+        -->
+
+        <p>
+            <label for="imsg">Mensagem:</label><br>
+            <textarea name="msg" id="imsg" cols="50" rows="10"></textarea>
+        </p>
+
+        <!-- Utilizar textarea com o método POST, para não ter problema de limitação -->
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
